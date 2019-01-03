@@ -1,0 +1,38 @@
+	<div class="landingpage remove-p-margin">
+		<div class="row">
+			<div class="five columns">
+				<section id="avatar">
+					<img class="avatar" src="{{.Site.Params.avatar}}">
+				</section>
+			</div>
+			<div class="seven columns">
+			<div class="autocenter">
+				<section id="bio">
+					<h3>{{ .Site.Params.author }}</h3>
+					<p class="reset-margin">{{ .Site.Params.bio | markdownify }}</p>
+				</section>
+				<section id="contact">
+					<div class="icons">
+					<h3>
+						{{ with .Site.Params.contact.email }}<a class="icon" href="mailto:{{ . }}">
+							<i class="fas fa-envelope" aria-hidden="true"></i>
+						</a>{{ end }}
+						{{ with .Site.Params.contact.github }}<a class="icon" href="https://github.com/{{ . }}" target="_blank">
+							<i class="fab fa-github" aria-hidden="true"></i>
+						</a>{{ end }}
+						{{ with .Site.Params.contact.twitter }}<a class="icon" href="https://twitter.com/{{ . }}" target="_blank">
+							<i class="fab fa-twitter" aria-hidden="true"></i>
+						</a>{{ end }}
+						{{ with .Site.Params.contact.instagram }}<a class="icon" href="https://instagram.com/{{ . }}" target="_blank">
+							<i class="fab fa-instagram" aria-hidden="true"></i>
+						</a>{{ end }}
+						{{ with .Site.Params.contact.ello }}<a class="icon" href="https://ello.co/{{ . }}" target="_blank">
+							<i class="fab fa-ello" aria-hidden="true"></i>
+						</a>{{ end }}
+					</h3>
+					</div>
+				</section>
+			</div>
+			</div>
+		</div>
+	</div>

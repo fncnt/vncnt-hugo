@@ -1,0 +1,9 @@
+<head>
+	<meta charset="utf-8">
+	{{with .Site.Title}}<title>{{.}}</title>{{end}}
+	{{with .Site.Params.description}}<meta name="description" content="{{.}}">{{end}}
+	{{ with .Site.Params.author }}<meta name="author" content="{{.}}">{{end}}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{partial "includes" . }}{{partial "scripts" . }}
+	{{ with .Site.Params.favicon }}<link rel="shortcut icon" href="/{{.}}">{{ end }}
+</head>

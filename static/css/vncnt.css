@@ -1,0 +1,93 @@
+/*
+* vncnt,css
+* Copyright 2017, Vincent Messow
+* vncnt.eu
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 
+* This file expects to inherit a ton of stuff from skeleton.css
+*/
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+@import url('skeleton.css');
+
+.landingpage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+}
+
+p.reset-margin {
+  margin-bottom: 1rem; /*skeleton.css: 2.5rem*/
+}
+
+.avatar {
+    width: 20rem;
+	  border-radius: 50%;
+	  -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%; 
+	  max-width: 60%;
+    box-sizing: border-box;
+    
+    display: block;
+    margin: auto;
+}
+
+.autocenter {
+  text-align: center;
+}
+
+.icons {
+
+}
+
+.icon {
+	text-rendering: geometricPrecision !important;
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	color: #555555;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  .landingpage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 75%;
+  }
+
+  .avatar {
+    max-width: 100%;
+    box-sizing: border-box;
+    float: right;
+  }
+  
+  .autocenter {
+    text-align: left;
+   }} 
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
