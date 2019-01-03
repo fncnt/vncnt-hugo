@@ -1,0 +1,39 @@
+baseURL = "https://example.com/"
+# include content marked as draft
+buildDrafts = false
+# include content with publishdate in the future
+buildFuture = false
+# include content already expired
+buildExpired = false
+# enable this to make all relative URLs relative to content root. Note that this does not affect absolute URLs.
+relativeURLs = true
+disableRSS = true
+enableRobotsTXT = true
+editor = "nano"
+languageCode = "en"
+language = "en"
+theme = "vncnt-hugo"
+title = "John Doe · Landing Page"
+
+[blackfriday]
+extensions = ["hardLineBreak"]
+
+[permalinks]
+fixed = ":title/"
+posts = "posts/:slug/"
+
+[params]
+author = "John Doe"
+description = "Landing Page"
+bio = "First Row. \nSecond Row."
+avatar = "img/avatar.jpg"
+favicon = "img/favicon.ico"
+
+	[params.contact]
+    email = "john.doe@example.com"
+    github = "jdoe"
+    instagram = "jdoe"
+    twitter = "jdoe"
+    ello = ""
+    
+
