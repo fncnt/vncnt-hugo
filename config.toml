@@ -12,7 +12,7 @@ enableRobotsTXT = true
 editor = "nano"
 languageCode = "en"
 language = "en"
-theme = "vincent-hugo"
+theme = "vncnt-hugo"
 title = "John Doe · Landing Page"
 
 [blackfriday]
