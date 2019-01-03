@@ -22,3 +22,8 @@ The Raleway font files in `static/fonts` are licensed under the SIL Open Font Li
 
 Both `normalize.css` and `skeleton.css` are licensed unter the MIT License.
 
+## Roadmap
+
+- possibly get rid of skeleton.css
+- add support for including blog-like content
+
