@@ -32,6 +32,7 @@ favicon = "img/favicon.ico"
 	[params.contact]
     email = "john.doe@example.com"
     github = "jdoe"
+    linkedin = "jdoe"
     instagram = "jdoe"
     twitter = "jdoe"
     ello = ""
