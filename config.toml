@@ -29,11 +29,9 @@ bio = "First Row. \nSecond Row."
 avatar = "img/avatar.jpg"
 favicon = "img/favicon.ico"
 
-	[params.contact]
+  [params.contact]
     email = "john.doe@example.com"
     github = "jdoe"
     instagram = "jdoe"
     twitter = "jdoe"
     ello = ""
-    
-
