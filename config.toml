@@ -30,6 +30,9 @@ title = "John Doe · Landing Page"
   favicon = "img/favicon.ico"
 
   [params.contact]
+  # randomize: limit icons to 5 and select random icons from the list
+  # https://github.com/fncnt/vncnt-hugo/pull/1#issuecomment-460051843
+    randomize = "true"
     email = "john.doe@example.com"
     github = "jdoe"
     instagram = "jdoe"

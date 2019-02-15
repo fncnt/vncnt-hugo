@@ -1,1 +1,17 @@
-  <!-- Scripts --------------------------------––––––––––––––––––––––––––––– -->
+  <!-- Scripts --------------------------------––––––––––––––––––––––––––––– -->```
+{{ if eq (string .Site.Params.contact.randomize) "true" }}
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    let contactListParent = document.querySelectorAll('[name=contact-list]')[0];
+    let contactList = contactListParent.children
+    for (let i = contactList.length; i >= 0; i--) {
+      contactListParent.appendChild(contactList[Math.random() * i | 0]);
+    }
+
+    for (let i = contactList.length - 1; contactList.length > 5; i--) {
+      contactList[i].remove();
+    }
+  })
+
+</script>
+{{ end }}
