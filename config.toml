@@ -28,6 +28,7 @@ title = "John Doe · Landing Page"
   bio = "First Row. \nSecond Row."
   avatar = "img/avatar.jpg"
   favicon = "img/favicon.ico"
+  error404 = "There is no such page"
 
   [params.contact]
     email = "john.doe@example.com"
