@@ -23,9 +23,7 @@ To add a link to a preferred service of your choice simply add a suitable key to
 linkedin = "https://www.linkedin.com/in/jdoe"
 ```
 Please note that the key must correspond to a [fontawesome brands icon](https://fontawesome.com/icons?d=gallery&s=brands).
-
 Also, regardless of the key order in your `config.toml` file, the links will be ordered lexicographically due to the usage of [`range`](https://golang.org/pkg/text/template/#hdr-Actions).
-
 However, those are trade-offs I'm willing to accept for simplicity.
 
 ## Third-party Components
