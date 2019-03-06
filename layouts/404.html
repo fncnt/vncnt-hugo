@@ -3,6 +3,8 @@
   <div class="error404">
     {{ with .Site.Params.error404 }}
       <h2>{{ . }}</h2>
+    {{ else }}
+      <h2>404 – There is no such page.</h2>
     {{ end }}
   </div>
 </html>
