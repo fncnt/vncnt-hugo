@@ -16,24 +16,22 @@ theme = "vncnt-hugo"
 title = "John Doe · Landing Page"
 
 [blackfriday]
-extensions = ["hardLineBreak"]
+  extensions = ["hardLineBreak"]
 
 [permalinks]
-fixed = ":title/"
-posts = "posts/:slug/"
+  fixed = ":title/"
+  posts = "posts/:slug/"
 
 [params]
-author = "John Doe"
-description = "Landing Page"
-bio = "First Row. \nSecond Row."
-avatar = "img/avatar.jpg"
-favicon = "img/favicon.ico"
+  author = "John Doe"
+  email = "john.doe@example.com"
+  description = "Landing Page"
+  bio = "First Row. \nSecond Row."
+  avatar = "img/avatar.jpg"
+  favicon = "img/favicon.ico"
 
-	[params.contact]
-    email = "john.doe@example.com"
-    github = "jdoe"
-    instagram = "jdoe"
-    twitter = "jdoe"
+  [params.contact]
+    github = "https://github.com/jdoe"
+    instagram = "https://instagram.com/jdoe"
+    twitter = "https://twitter.com/jdoe"
     ello = ""
-    
-
