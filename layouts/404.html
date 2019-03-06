@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
   {{ partial "includes" . }}
-  <div class="error404 autocenter">
+  <div class="error404">
+      <h1>{{ "**404**" | markdownify }}</h1>
     {{ with .Site.Params.error404 }}
-      <h2>{{ . | markdownify }}</h2>
+      <h2>{{ "---" | markdownify }}{{ . | markdownify }}</h2>
     {{ else }}
-      <h2>{{ "404 -- There is no such page." | markdownify}}</h2>
+      <h2>{{ "---" | markdownify }}{{ "There is no such page." | markdownify}}</h2>
     {{ end }}
   </div>
 </html>
