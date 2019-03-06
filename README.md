@@ -18,7 +18,7 @@ If you set `email` in `[params]`, the link to your email will appear in front of
 
 ### Changing Contact Links
 
-To add a link to a preferred service of your choice simply add a suitable key to to `[params.contact]`, e.g.
+To add a link to a preferred service of your choice simply add a suitable key to `[params.contact]`, e.g.
 ```
 linkedin = "https://www.linkedin.com/in/jdoe"
 ```
