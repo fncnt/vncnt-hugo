@@ -14,20 +14,11 @@
         <section id="contact">
           <div class="icons">
           <h3>
-            {{ with .Site.Params.contact.email }}<a class="icon" href="mailto:{{ . }}">
+            {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}">
               <i class="fas fa-envelope" aria-hidden="true"></i>
             </a>{{ end }}
-            {{ with .Site.Params.contact.github }}<a class="icon" href="https://github.com/{{ . }}" target="_blank">
-              <i class="fab fa-github" aria-hidden="true"></i>
-            </a>{{ end }}
-            {{ with .Site.Params.contact.twitter }}<a class="icon" href="https://twitter.com/{{ . }}" target="_blank">
-              <i class="fab fa-twitter" aria-hidden="true"></i>
-            </a>{{ end }}
-            {{ with .Site.Params.contact.instagram }}<a class="icon" href="https://instagram.com/{{ . }}" target="_blank">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>{{ end }}
-            {{ with .Site.Params.contact.ello }}<a class="icon" href="https://ello.co/{{ . }}" target="_blank">
-              <i class="fab fa-ello" aria-hidden="true"></i>
+            {{ range $contact_key,  $contact_link := .Site.Params.contact }}<a class="icon" href="{{ $contact_link }}" target="_blank">
+              <i class="fab fa-{{ $contact_key }}" aria-hidden="true"></i>
             </a>{{ end }}
           </h3>
           </div>

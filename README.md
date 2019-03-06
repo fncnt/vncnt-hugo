@@ -14,6 +14,18 @@ git clone https://github.com/fncnt/vncnt-hugo
 Copy the `config.toml` file of the theme into the main directory of your **hugo** website.
 You may want to adjust the value of `baseURL` as well as the parameters in the `[params]` section.
 
+If you set `email` in `[params]`, the link to your email will appear in front of all keys set in `[params.contact].`
+
+### Changing Contact Links
+
+To add a link to a preferred service of your choice simply add a suitable key to to `[params.contact]`, e.g.
+```
+linkedin = "https://www.linkedin.com/in/jdoe"
+```
+Please note that the key must correspond to a [fontawesome brands icon](https://fontawesome.com/icons?d=gallery&s=brands).
+Also, regardless of the key order in your `config.toml` file, the links will be ordered lexicographically due to the usage of [`range`](https://golang.org/pkg/text/template/#hdr-Actions).
+However, those are trade-offs I'm willing to accept for simplicity.
+
 ## Third-party Components
 
 This theme relies on fontawesome. The included files in `static/webfonts` are used under the SIL Open Font License 1.1 as described in `static/css/all.min.css`. The latter file is licensed under the MIT License.
