@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
   {{ partial "includes" . }}
-  <div class="error404">
+  <div class="error404 autocenter">
     {{ with .Site.Params.error404 }}
       <h2>{{ . | markdownify }}</h2>
     {{ else }}
