@@ -29,6 +29,7 @@ there.
 
 .error404 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 p.reset-margin {
@@ -68,7 +69,7 @@ p.reset-margin {
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  .landingpage {
+  .landingpage, .error404 {
     position: absolute;
     top: 50%;
     left: 50%;
