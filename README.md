@@ -10,7 +10,7 @@ git clone https://github.com/fncnt/vncnt-hugo themes/vncnt-hugo
 ```
 Or even better, add this repository as a submodule of your **hugo** website, if you are using `git` for it:
 ```
-git add submodule https://github.com/fncnt/vncnt-hugo themes/vncnt-hugo
+git submodule add https://github.com/fncnt/vncnt-hugo themes/vncnt-hugo
 ```
 
 ## Configuration
