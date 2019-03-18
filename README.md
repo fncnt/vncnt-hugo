@@ -38,6 +38,12 @@ The Raleway font files in `static/fonts` are licensed under the SIL Open Font Li
 
 Both `normalize.css` and `skeleton.css` are licensed unter the MIT License.
 
+### Tracking
+
+The theme supports Google Analytics using Hugo's internal templates. To enable
+tracking, set the [googleAnalytics](https://gohugo.io/templates/internal/#configure-google-analytics)
+and (optionally) [privacy](https://gohugo.io/about/hugo-and-gdpr/#all-privacy-settings) configuration values.
+
 ## Roadmap
 
 - possibly get rid of skeleton.css
