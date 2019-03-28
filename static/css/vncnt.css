@@ -16,7 +16,7 @@ near the relevant code. For example, if you wanted to change the styles for butt
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
-@import url('skeleton.css');
+@import url('barebones.css');
 
 .landingpage, .error404 {
   position: absolute;
@@ -64,11 +64,8 @@ p.reset-margin {
 	color: #555555;
 }
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
+/* Larger than mobile (default point when grid becomes active) */
+@media (min-width: 600px) {
   .landingpage, .error404 {
     position: absolute;
     top: 50%;
@@ -88,11 +85,8 @@ p.reset-margin {
     text-align: left;
    }} 
 
+/* Larger than phablet */
+@media (min-width: 900px) {}
+
 /* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
 @media (min-width: 1200px) {}
