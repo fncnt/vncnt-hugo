@@ -32,14 +32,14 @@ However, those are trade-offs I'm willing to accept for simplicity.
 
 ## Third-party Components
 
+The backbone (I'm so sorry) of this theme is made of [`Barebones`](https://github.com/acahir/Barebones).
+Both `normalize.css` and `barebones.css` are licensed unter the MIT License.
+
 This theme relies on fontawesome. The included files in `static/webfonts` are used under the SIL Open Font License 1.1 as described in `static/css/all.min.css`. The latter file is licensed under the MIT License.
 
 The Raleway font files in `static/fonts` are licensed under the SIL Open Font License 1.1 (see `static/fonts/OFL.txt`)
 
-Both `normalize.css` and `skeleton.css` are licensed unter the MIT License.
-
 ## Roadmap
 
-- possibly get rid of skeleton.css
-- add support for including blog-like content
+- add support for blog-like content
 
