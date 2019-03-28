@@ -102,14 +102,14 @@ p.reset-margin {
 
 /* Larger than phablet */
 @media (min-width: 900px) {
+  html {
+	  --base-font-size: 80%;
+  }
+  
   p.reset-margin {
     margin-bottom: 2rem; /*skeleton.css: 2.5rem*/
   }
 }
 
 /* Larger than tablet */
-@media (min-width: 1200px) {
-  html {
-	  --base-font-size: 80%;
-  }
-}
+@media (min-width: 1200px) {}
