@@ -1,25 +1,25 @@
   <div class="landingpage">
-    <div class="grid-container fivetoseven">
-      <div class="item">
+    <div class="grid-container fivetoseven" role="main">
+      <div class="item" aria-label="Avatar">
         <section id="avatar">
-          <img class="avatar" src="{{.Site.Params.avatar}}">
+          <img class="avatar" src="{{ .Site.Params.avatar }}" alt="{{ path.Base .Site.Params.avatar }}">
         </section>
       </div>
       <div class="grid-container full autocenter">
-        <section id="bio">
-          <h3>{{ .Site.Params.author }}</h3>
-          <p class="reset-margin">{{ .Site.Params.bio | markdownify }}</p>
+        <section id="bio" aria-label="Biography">
+          <h1 class="h3-like" aria-level="1" aria-label="Name">{{ .Site.Params.author }}</h1>
+          <p class="reset-margin" title="About" aria-label="About">{{ .Site.Params.bio | markdownify }}</p>
         </section>
-        <section id="contact">
-          <div class="icons">
-          <h3>
+        <section id="contact" aria-label="Contact">
+          <div class="icons" aria-label="Links">
+          <h2 class="h3-like" aria-label="Link Icons">
             {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <i class="fas fa-envelope" title="email" aria-label="Send email."></i>
             </a>{{ end }}
             {{ range $contact_key,  $contact_link := .Site.Params.contact }}<a class="icon" href="{{ $contact_link }}" target="_blank">
-              <i class="fab fa-{{ $contact_key }}" aria-hidden="true"></i>
+              <i class="fab fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
             </a>{{ end }}
-          </h3>
+          </h2>
           </div>
         </section>
       </div>
