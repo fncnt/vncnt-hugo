@@ -16,7 +16,11 @@ near the relevant code. For example, if you wanted to change the styles for butt
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
-@import url('skeleton.css');
+@import url('barebones.css');
+
+html {
+	--base-font-size: 80%;
+}
 
 .landingpage, .error404 {
   position: absolute;
@@ -33,7 +37,7 @@ there.
 }
 
 p.reset-margin {
-  margin-bottom: 1rem; /*skeleton.css: 2.5rem*/
+  margin-bottom: 2rem; /*skeleton.css: 2.5rem*/
 }
 
 .avatar {
@@ -53,8 +57,13 @@ p.reset-margin {
 }
 
 .icons {
-
+  bottom: 0;
 }
+
+.icons h3 {
+  margin-bottom: 0;
+}
+
 
 .icon {
 	text-rendering: geometricPrecision !important;
@@ -64,11 +73,16 @@ p.reset-margin {
 	color: #555555;
 }
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
+/* Larger than mobile (default point when grid becomes active) */
+@media (min-width: 600px) {
+  .grid-container.fivetoseven {
+		grid-template-columns: 5fr 7fr;
+	}
+	
+	.item {
+	  align-self: center;
+	}
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
   .landingpage, .error404 {
     position: absolute;
     top: 50%;
@@ -86,13 +100,12 @@ p.reset-margin {
   
   .autocenter {
     text-align: left;
-   }} 
+    padding: 0 0;
+  }
+} 
+
+/* Larger than phablet */
+@media (min-width: 900px) {}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
 @media (min-width: 1200px) {}

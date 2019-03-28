@@ -1,12 +1,11 @@
   <div class="landingpage">
-    <div class="row">
-      <div class="five columns">
+    <div class="grid-container fivetoseven">
+      <div class="item">
         <section id="avatar">
           <img class="avatar" src="{{.Site.Params.avatar}}">
         </section>
       </div>
-      <div class="seven columns">
-      <div class="autocenter">
+      <div class="grid-container full autocenter">
         <section id="bio">
           <h3>{{ .Site.Params.author }}</h3>
           <p class="reset-margin">{{ .Site.Params.bio | markdownify }}</p>
@@ -23,7 +22,6 @@
           </h3>
           </div>
         </section>
-      </div>
       </div>
     </div>
   </div>
