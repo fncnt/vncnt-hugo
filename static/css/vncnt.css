@@ -18,10 +18,6 @@ there.
 */
 @import url('barebones.css');
 
-html {
-	--base-font-size: 80%;
-}
-
 .landingpage, .error404 {
   position: absolute;
   top: 50%;
@@ -75,6 +71,10 @@ p.reset-margin {
 
 /* Larger than mobile (default point when grid becomes active) */
 @media (min-width: 600px) {
+  html {
+	  --base-font-size: 80%;
+  }
+  
   .grid-container.fivetoseven {
 		grid-template-columns: 5fr 7fr;
 	}
