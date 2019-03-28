@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
   {{ partial "includes" . }}
   <div class="error404">
-    <div class="row">
-      <div class="twelve columns">
+    <div class="grid-container full">
+      <div>
         <h1>{{ "**404**" | markdownify }}</h1>
       {{ with .Site.Params.error404 }}
         <h2>{{ "---" | markdownify }}{{ . | markdownify }}</h2>
