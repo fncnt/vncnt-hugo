@@ -89,7 +89,7 @@ p.reset-margin {
   }
 
   .avatar {
-    max-width: 100%;
+    max-width: 200%;
     box-sizing: border-box;
     float: right;
   }
