@@ -19,7 +19,7 @@ there.
 @import url('barebones.css');
 
 @media screen and (prefers-color-scheme: dark) {
-	:html {
+	:root {
 		/* dark theme: light background, dark text, blue accent */
 		--theme-hue: 0;					/* black */
 		--accent-hue: 194;			/* blue */
