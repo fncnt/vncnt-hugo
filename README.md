@@ -45,6 +45,10 @@ The theme supports Google Analytics using Hugo's internal templates. To enable
 tracking, set the [googleAnalytics](https://gohugo.io/templates/internal/#configure-google-analytics)
 and (optionally) [privacy](https://gohugo.io/about/hugo-and-gdpr/#all-privacy-settings) configuration values.
 
+## Dark Mode
+
+On [supported browsers](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme#Browser_compatibility), this theme applies a dark mode if the user's OS itself is set to dark.
+
 ## Roadmap
 
 - add support for blog-like content
