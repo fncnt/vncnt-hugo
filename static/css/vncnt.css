@@ -18,6 +18,43 @@ there.
 */
 @import url('barebones.css');
 
+@media (prefers-color-scheme: dark) {
+	:html {
+		/* dark theme: light background, dark text, blue accent */
+		--theme-hue: 0;					/* black */
+		--accent-hue: 194;			/* blue */
+
+		--text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* 		*/
+		--text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:focus color */
+		--text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* button color; button:hover border */
+
+		--accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
+		--accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:focus bg+border */
+
+		--border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
+		--border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
+	
+		--background-color: hsl(var(--theme-hue), 0%, 12%);			/* body background; textarea,select background */
+		--background-color-softer: hsl(var(--theme-hue), 0%, 18%);
+		--code-background: hsl(var(--theme-hue), 0%, 5%);				/* code background*/
+
+		--button-primary-color: white;
+  }
+	
+	img.value-img {
+		filter: invert(0.8);
+	}
+	/* TODO - test dialing back image intensity on dark background
+  img {
+    opacity: .80;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+  */
+}
+
 h1.h3-like, h2.h3-like {
   font-size: 3.0rem;
   line-height: 1.3;
