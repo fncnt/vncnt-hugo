@@ -44,7 +44,6 @@ there.
 	img.value-img {
 		filter: invert(0.8);
 	}
-	/* TODO - test dialing back image intensity on dark background
   img {
     opacity: .80;
     transition: opacity .5s ease-in-out;
@@ -52,7 +51,6 @@ there.
   img:hover {
     opacity: 1;
   }
-  */
 }
 
 h1.h3-like, h2.h3-like {
