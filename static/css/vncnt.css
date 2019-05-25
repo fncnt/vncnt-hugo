@@ -18,7 +18,7 @@ there.
 */
 @import url('barebones.css');
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 	:html {
 		/* dark theme: light background, dark text, blue accent */
 		--theme-hue: 0;					/* black */
