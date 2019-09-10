@@ -11,39 +11,39 @@
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
+* Note: The best way to structure the use of media queries is to create the queries
+* near the relevant code. For example, if you wanted to change the styles for buttons
+* on small devices, paste the mobile query code up in the buttons section and style it
+* there.
 */
 @import url('barebones.css');
 
 @media screen and (prefers-color-scheme: dark) {
-	:root {
-		/* dark theme: light background, dark text, blue accent */
-		--theme-hue: 0;					/* black */
-		--accent-hue: 194;			/* blue */
+  :root {
+    /* dark theme: light background, dark text, blue accent */
+    --theme-hue: 0;         /* black */
+    --accent-hue: 194;      /* blue */
 
-		--text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* 		*/
-		--text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:focus color */
-		--text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* button color; button:hover border */
+    --text-color-richer: hsl(var(--theme-hue), 0%, 95%);  /*     */
+    --text-color-normal: hsl(var(--theme-hue), 0%, 80%);  /* text color; button:hover:focus color */
+    --text-color-softer: hsl(var(--theme-hue), 0%, 67%);  /* button color; button:hover border */
 
-		--accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
-		--accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:focus bg+border */
+    --accent-color: hsl(var(--accent-hue), 76%, 49%);         /* link; button-primary bg+border; textarea,select:focus border */
+    --accent-color-hover: hsl(var(--accent-hue), 86%, 57%);   /* link hover; button-primary:hover:focus bg+border */
 
-		--border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
-		--border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
-	
-		--background-color: hsl(var(--theme-hue), 0%, 12%);			/* body background; textarea,select background */
-		--background-color-softer: hsl(var(--theme-hue), 0%, 18%);
-		--code-background: hsl(var(--theme-hue), 0%, 5%);				/* code background*/
+    --border-color: hsl(var(--theme-hue), 0%, 27%);           /* button border */
+    --border-color-softer: hsl(var(--theme-hue), 0%, 20%);    /* textarea,select,code,td,hr border   */
+  
+    --background-color: hsl(var(--theme-hue), 0%, 12%);       /* body background; textarea,select background */
+    --background-color-softer: hsl(var(--theme-hue), 0%, 18%);
+    --code-background: hsl(var(--theme-hue), 0%, 5%);         /* code background*/
 
-		--button-primary-color: white;
+    --button-primary-color: white;
   }
-	
-	img.value-img {
-		filter: invert(0.8);
-	}
+  
+  img.value-img {
+    filter: invert(0.8);
+  }
   img {
     opacity: .80;
     transition: opacity .5s ease-in-out;
@@ -78,15 +78,14 @@ p.reset-margin {
 }
 
 .avatar {
-    width: 20rem;
-	  border-radius: 50%;
-	  -webkit-border-radius: 50%;
-	  -moz-border-radius: 50%; 
-	  max-width: 60%;
-    box-sizing: border-box;
-    
-    display: block;
-    margin: auto;
+  width: 20rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%; 
+  max-width: 60%;
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
 }
 
 .autocenter {
@@ -101,13 +100,12 @@ p.reset-margin {
   margin-bottom: 0;
 }
 
-
 .icon {
-	text-rendering: geometricPrecision !important;
-	text-decoration: none;
-	border-bottom: none;
-	position: relative;
-	color: #555555;
+  text-rendering: geometricPrecision !important;
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+  color: #555555;
 }
 
 /* Larger than mobile (default point when grid becomes active) */
@@ -117,12 +115,12 @@ p.reset-margin {
   }
     
   .grid-container.fivetoseven {
-		grid-template-columns: 5fr 7fr;
-	}
-	
-	.item {
-	  align-self: center;
-	}
+    grid-template-columns: 5fr 7fr;
+  }
+  
+  .item {
+    align-self: center;
+  }
 
   .landingpage, .error404 {
     position: absolute;
@@ -148,7 +146,7 @@ p.reset-margin {
 /* Larger than phablet */
 @media (min-width: 900px) {
   html {
-	  --base-font-size: 80%;
+    --base-font-size: 80%;
   }
   
   p.reset-margin {
