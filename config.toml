@@ -15,9 +15,6 @@ language = "en"
 theme = "vncnt-hugo"
 title = "John Doe · Landing Page"
 
-[blackfriday]
-  extensions = ["hardLineBreak"]
-
 [permalinks]
   fixed = ":title/"
   posts = "posts/:slug/"
@@ -26,7 +23,7 @@ title = "John Doe · Landing Page"
   author = "John Doe"
   email = "john.doe@example.com"
   description = "Landing Page"
-  bio = "First Row. \nSecond Row."
+  bio = "First Row.  \nSecond Row."
   avatar = "img/avatar.jpg"
   favicon = "img/favicon.ico"
   error404 = "There is no such page."
