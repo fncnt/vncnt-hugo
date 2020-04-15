@@ -8,7 +8,7 @@ description = "A simple theme for your personal landing page."
 homepage = "https://github.com/fncnt/vncnt-hugo/"
 tags = ["minimal", "landingpage", "responsive", "fontawesome", "personal"]
 features = ["responsive", "dark mode", "lightweight"]
-min_version = "0.41"
+min_version = "0.60"
 
 [author]
   name = "Vincent von Schelm"
