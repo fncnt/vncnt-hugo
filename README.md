@@ -30,6 +30,11 @@ Please note that the key must correspond to a [fontawesome brands icon](https://
 Also, regardless of the key order in your `config.toml` file, the links will be ordered lexicographically due to the usage of [`range`](https://golang.org/pkg/text/template/#hdr-Actions).
 However, those are trade-offs I'm willing to accept for simplicity.
 
+You may specify another `fontawesome` icon and class like this:
+```
+mountain = [ "https://local-hiking.club", "fas" ]
+```
+
 ## Third-party Components
 
 The spine (I'm so sorry) of this theme is made of [`Barebones`](https://github.com/acahir/Barebones).

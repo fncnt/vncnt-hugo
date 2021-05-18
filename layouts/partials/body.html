@@ -16,8 +16,14 @@
             {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}" target="_blank" rel="noopener me">
               <i class="fas fa-envelope" title="email" aria-label="Send email."></i>
             </a>{{ end }}
-            {{ range $contact_key,  $contact_link := .Site.Params.contact }}<a class="icon" href="{{ $contact_link }}" target="_blank" rel="noopener me">
+            {{ range $contact_key,  $contact_link := .Site.Params.contact }}
+              {{ if in (slice "fab" "fas" "far" "fal" "fad") (index $contact_link 1) }}
+              <a class="icon" href="{{ index $contact_link 0 }}" target="_blank" rel="noopener me">
+              <i class="{{ index $contact_link 1 }} fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
+              {{ else }}
+              <a class="icon" href="{{ $contact_link }}" target="_blank" rel="noopener me">
               <i class="fab fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
+              {{ end }}
             </a>{{ end }}
           </h2>
           </div>
