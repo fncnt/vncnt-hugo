@@ -16,12 +16,15 @@
             {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}" target="_blank" rel="noopener me">
               <i class="fas fa-envelope" title="email" aria-label="Send email."></i>
             </a>{{ end }}
-            {{ range $contact_key,  $contact_link := .Site.Params.contact }}
-              {{ if in (slice "fab" "fas" "far" "fal" "fad") (index $contact_link 1) }}
-              <a class="icon" href="{{ index $contact_link 0 }}" target="_blank" rel="noopener me">
-              <i class="{{ index $contact_link 1 }} fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
+            {{ range $contact_key,  $contact := .Site.Params.contact }}
+              {{ if reflect.IsMap $contact }}
+              {{ $style := default "fas" (index $contact "style") }}
+              {{ $icon := default $contact_key (index $contact "icon") }}
+              {{ $label := default $contact_key (index $contact "name") }}
+              <a class="icon" href="{{ index $contact "link" }}" target="_blank" rel="noopener me">
+              <i class="{{ $style }} fa-{{ $icon }}" title="{{ $label }}" aria-label="Go to {{ $label }}."></i>
               {{ else }}
-              <a class="icon" href="{{ $contact_link }}" target="_blank" rel="noopener me">
+              <a class="icon" href="{{ $contact }}" target="_blank" rel="noopener me">
               <i class="fab fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
               {{ end }}
             </a>{{ end }}

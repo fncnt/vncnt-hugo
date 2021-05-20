@@ -21,7 +21,9 @@ title = "John Doe · Landing Page"
 
 [params]
   author = "John Doe"
-  email = "john.doe@example.com"
+  # email does still work but is deprecated.
+  # use [params.contact.email] instead.
+  #email = "john.doe@example.com"
   description = "Landing Page"
   bio = "First Row.  \nSecond Row."
   avatar = "img/avatar.jpg"
@@ -32,5 +34,21 @@ title = "John Doe · Landing Page"
     github = "https://github.com/jdoe"
     instagram = "https://instagram.com/jdoe"
     twitter = "https://twitter.com/jdoe"
-    ello = ""
-    hiking = [ "https://local-hiking.club", "fas" ]
+    
+    # You may use (inline) tables for more versatility
+    # This allows sorting and even more icons.
+    # Just make sure not to mix key-value pairs, inline tables and tables,
+    # although keeping keeping this order is ok.
+    # See https://toml.io/en/v1.0.0 for details
+    0 = { name = "ello", icon = "ello", style = "fab", link = "" } # empty links are relative to site root
+    [params.contact.1] # key names are sorted lexicographically
+      name = "hiking club" # may be omitted. defaults to key name
+      icon = "hiking" # may be omitted. defaults to key name
+      style = "fas" # may be omitted. default = "fas"
+      link = "https://local-hiking.club"
+    [params.contact.email]
+      name = "email" # may be omitted. defaults to key name
+      icon = "envelope" # may be omitted. defaults to key name
+      style = "fas" # may be omitted. default = "fas"
+      link = "mailto:john.doe@example.com"
+    
