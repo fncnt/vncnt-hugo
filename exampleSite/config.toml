@@ -33,6 +33,7 @@ _merge = "none"
   error404 = "There is no such page."
 
   [params.contact]
+    # the default fontawesome style in simple key-value pairs is "fab", i.e. brand icons
     github = "https://github.com/jdoe"
     instagram = "https://instagram.com/jdoe"
     twitter = "https://twitter.com/jdoe"
@@ -42,7 +43,7 @@ _merge = "none"
     # Just make sure not to mix key-value pairs, inline tables and tables,
     # although keeping keeping this order is ok.
     # See https://toml.io/en/v1.0.0 for details
-    0 = { name = "ello", icon = "ello", style = "fab", link = "" } # empty links are relative to site root
+    0 = { name = "ello", icon = "ello", style = "fab", link = "" } # empty links are possible
     [params.contact.1] # key names are sorted lexicographically
       name = "hiking club" # may be omitted. defaults to key name
       icon = "hiking" # may be omitted. defaults to key name
@@ -53,4 +54,16 @@ _merge = "none"
       icon = "envelope" # may be omitted. defaults to key name
       style = "fas" # may be omitted. default = "fas"
       link = "mailto:john.doe@example.com"
+    [params.contact.mastodon]
+      style = "fab" # may be omitted. default = "fas"
+      link = "https://example.social/@jdoe"
+      # By default rel="me" is not set
+      # For some services, it makes sense to set it though.
+      # This is the case for Mastodon (and Github) if you link back from these services.
+      # See
+      # https://microformats.org/wiki/rel-me and
+      # https://docs.joinmastodon.org/user/profile/#verification
+      # for more information.
+      # This defaults to false to cover the case of not having control over the linked site.
+      rel-me = true
     

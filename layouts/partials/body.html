@@ -13,7 +13,7 @@
         <section id="contact" aria-label="Contact">
           <div class="icons" aria-label="Links">
           <h2 class="h3-like" aria-label="Link Icons">
-            {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}" target="_blank" rel="noopener me">
+            {{ with .Site.Params.email }}<a class="icon" href="mailto:{{ . }}" target="_blank" rel="noopener">
               <i class="fas fa-envelope" title="email" aria-label="Send email."></i>
             </a>{{ end }}
             {{ range $contact_key,  $contact := .Site.Params.contact }}
@@ -21,10 +21,11 @@
               {{ $style := default "fas" (index $contact "style") }}
               {{ $icon := default $contact_key (index $contact "icon") }}
               {{ $label := default $contact_key (index $contact "name") }}
-              <a class="icon" href="{{ index $contact "link" }}" target="_blank" rel="noopener me">
+              {{ $relme := cond (default false (index $contact "rel-me")) " me" "" }}
+              <a class="icon" href="{{ index $contact "link" }}" target="_blank" rel="noopener{{ $relme }}">
               <i class="{{ $style }} fa-{{ $icon }}" title="{{ $label }}" aria-label="Go to {{ $label }}."></i>
               {{ else }}
-              <a class="icon" href="{{ $contact }}" target="_blank" rel="noopener me">
+              <a class="icon" href="{{ $contact }}" target="_blank" rel="noopener">
               <i class="fab fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
               {{ end }}
             </a>{{ end }}

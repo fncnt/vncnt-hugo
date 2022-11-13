@@ -32,6 +32,13 @@ Also, regardless of the key order in your `config.toml` file, the links will be 
 However, you may specify contact links more verbosely, as documented in [`config.toml`](config.toml).
 This allows to use other fontawesome styles and manually sort contact links.
 
+#### `rel="me"`
+
+This theme now allows to set the [`rel="me"`](https://microformats.org/wiki/rel-me) value manually.
+Previously, this was always set but now is done on an opt-in basis to give more control over link verification.
+Services like Github or [Mastodon](https://docs.joinmastodon.org/user/profile/#verification) make use of this.
+An example is given in the provided `config.toml` file.
+
 ## Third-party Components
 
 The spine (I'm so sorry) of this theme is made of [`Barebones`](https://github.com/acahir/Barebones).
