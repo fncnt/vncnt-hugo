@@ -6,13 +6,13 @@ license = "MIT"
 licenselink = "https://github.com/fncnt/vncnt-hugo/blob/master/LICENSE"
 description = "A simple theme for your personal landing page."
 homepage = "https://github.com/fncnt/vncnt-hugo/"
-tags = ["minimal", "landingpage", "responsive", "fontawesome", "personal"]
+tags = ["minimal", "landingpage", "responsive", "fontawesome", "personal", "dark mode"]
 features = ["responsive", "dark mode", "lightweight"]
 min_version = "0.60"
 
 [author]
-  name = "Vincent von Schelm"
-  homepage = "https://vncnt.eu/"
+  name = "fncnt"
+  homepage = "https://github.com/fncnt/"
 
 # If porting an existing theme
 [original]
