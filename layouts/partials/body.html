@@ -22,10 +22,10 @@
               {{ $icon := default $contact_key (index $contact "icon") }}
               {{ $label := default $contact_key (index $contact "name") }}
               {{ $relme := cond (default false (index $contact "rel-me")) " me" "" }}
-              <a class="icon" href="{{ index $contact "link" }}" target="_blank" rel="noopener{{ $relme }}">
+              <a class="icon" href="{{ index $contact "link" | safeURL }}" target="_blank" rel="noopener{{ $relme }}">
               <i class="{{ $style }} fa-{{ $icon }}" title="{{ $label }}" aria-label="Go to {{ $label }}."></i>
               {{ else }}
-              <a class="icon" href="{{ $contact }}" target="_blank" rel="noopener">
+              <a class="icon" href="{{ $contact | safeURL }}" target="_blank" rel="noopener">
               <i class="fab fa-{{ $contact_key }}" title="{{ $contact_key }}" aria-label="Go to {{ $contact_key }}."></i>
               {{ end }}
             </a>{{ end }}
